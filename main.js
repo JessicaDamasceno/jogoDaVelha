@@ -1,11 +1,11 @@
-const endereco = "http://127.0.0.1:5501/jogo-da-velha/";
-const telaBranca = `${endereco}img/tela-branca.jpg`;
-const telaX = `${endereco}img/img-X.png`;
-const telaO = `${endereco}img/img-O.png`;
 const empateImg = "img/empate.jpg";
-const vencedorX = "img/vencedor-X.png";
-const vencedorO = "img/vencedor-O.png";
-const enderecoImagens = [telaBranca, telaX, telaO, vencedorX, vencedorO];
+const imagemBotao = [
+	"img/tela-branca.jpg",
+	"img/img-X.png",
+	"img/img-O.png",
+	"img/vencedor-X.png",
+	"img/vencedor-O.png",
+];
 const botoes = document.querySelectorAll(".botao");
 const imagens = document.querySelectorAll(".imagem");
 const mostrador = document.querySelector("#mostrador-img");
@@ -13,8 +13,8 @@ const mostradorTexto = document.querySelector("#mostrador");
 const placarX = document.querySelector("#placarX");
 const placarO = document.querySelector("#placarO");
 const restart = document.querySelector("#placar-botao");
-const jogador1 = enderecoImagens[1];
-const jogador2 = enderecoImagens[2];
+const jogador1 = imagemBotao[1];
+const jogador2 = imagemBotao[2];
 
 let jogadorAtual = jogador1;
 let numplayer = [];
@@ -98,9 +98,9 @@ const desligarBotao = (i) => {
 const verificar = (i) => {
 	for (i = 0; i < imagens.length; i++) {
 		numplayer.splice(i, 1, imagens[i].src);
-		if (numplayer[i] == enderecoImagens[1]) {
+		if (numplayer[i].includes(imagemBotao[1])) {
 			numplayer.splice(i, 1, 1);
-		} else if (numplayer[i] == enderecoImagens[2]) {
+		} else if (numplayer[i].includes(imagemBotao[2])) {
 			numplayer.splice(i, 1, 2);
 		} else {
 			numplayer.splice(i, 1, "-");
@@ -120,13 +120,13 @@ const retornarVencedor = (a) => (numplayer = numplayer[a]);
 const imgVencedor = (a, b, c) => {
 	verificarVencedor();
 	if (quemVenceu == 1) {
-		imagens[a].src = enderecoImagens[3];
-		imagens[b].src = enderecoImagens[3];
-		imagens[c].src = enderecoImagens[3];
+		imagens[a].src = imagemBotao[3];
+		imagens[b].src = imagemBotao[3];
+		imagens[c].src = imagemBotao[3];
 	} else if (quemVenceu == 2) {
-		imagens[a].src = enderecoImagens[4];
-		imagens[b].src = enderecoImagens[4];
-		imagens[c].src = enderecoImagens[4];
+		imagens[a].src = imagemBotao[4];
+		imagens[b].src = imagemBotao[4];
+		imagens[c].src = imagemBotao[4];
 	}
 };
 
@@ -185,7 +185,7 @@ const mostrarVencedor = () => {
 };
 const novoJogo = () => {
 	for (let i = 0; i < imagens.length; i++) {
-		imagens[i].src = enderecoImagens[0];
+		imagens[i].src = imagemBotao[0];
 		ligarBotao(i);
 	}
 	statusMostrador(0);
