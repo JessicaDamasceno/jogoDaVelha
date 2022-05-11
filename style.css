@@ -1,0 +1,121 @@
+:root{
+    --tapestry: 'Tapestry', cursive;
+    --serif: 'PT Serif', serif;
+}
+body{
+    text-align: center;
+    min-width: 320px;
+    max-width: 480px;
+    height: 100%;
+    background: linear-gradient(90deg,rgb(196, 196, 195), rgb(133, 133, 137));
+    
+}
+h1{
+    display: inline-block;
+    font-family: var(--tapestry);
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: bold;
+    background: linear-gradient(to top, rgb(2, 50, 33) 30%,rgb(15, 137, 64) 70%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+
+    padding: 0 1rem 0.5rem 1rem;
+}
+.menu{
+    margin-bottom: 2rem;
+}
+#novoJogo, #placar-botao{
+    font-size: 1.5rem;
+    background-color: #bdc6be;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px 2px #000000;
+
+    margin-top: 1.5rem;
+    
+}
+#novoJogo:active, #placar-botao:active {
+    background-color: rgb(207, 216, 207);
+    transform: scale(1.2);
+}
+#mostrador{
+    font-weight: bold;
+    font-family: var(--serif);
+
+    display: inline;
+}
+#mostrador-img {
+    margin-top: 2rem;
+    width: 35px;
+
+    display: inline;
+}
+.tabela{
+    background-color: rgb(65, 64, 64);
+    border-radius: 10px;
+    box-shadow: -10px 10px 30px 2px #000000,
+    10px 10px 30px 2px #000000;
+
+    position: relative;
+    margin: 1rem auto;
+    width: 17rem;
+    height: 17rem;
+    padding: 0.5rem 0.5rem 0;
+}
+
+.botao{
+    border: none;
+    background-color: white;
+
+    width: 6em;
+    height: 6em;
+    margin: 4px 0;
+}
+.botao img{
+    width: 100%;
+    height: 100%;
+
+}
+.placar-img{
+    display: inline;
+    width: 3rem;
+    margin-top: 1rem;
+    
+}
+#placarX{
+    font-weight: bold;
+    color: blue;
+
+    font-size: 35px;
+    margin: 0 3rem 0 1rem;
+}
+#placarO{
+    font-weight: bold;
+    color: darkorange;
+
+    font-size: 35px;
+    margin: 0 0 0 1rem;
+}
+.placar-value{
+    display: inline;
+}
+
+/* tablet */
+@media screen and (min-width:481px){
+    body{
+        min-width: 481px;
+        max-width: 1023px;
+    }
+
+}
+/* desktop*/
+@media screen and (min-width:1024px){
+
+    body{
+        margin: 0 auto;
+    }
+    h1{
+        font-size: 4rem;
+    }
+}

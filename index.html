@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=PT+Serif:ital@1&family=Tapestry&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Jogo da Velha</title>
+	</head>
+	<body>
+		<section class="menu">
+			<h1>Jogo da velha</h1>
+			<div>
+				<button id="novoJogo" onclick="novoJogo()">Novo Jogo</button>
+			</div>
+			<div>
+				<p id="mostrador"></p>
+				<img id="mostrador-img" src="img/img-X.png" alt="" />
+			</div>
+		</section>
+		<section class="tabela">
+			<div class="linha1">
+				<button class="botao" onclick="jogar('0')">
+					<img id="0" class="imagem" src="" />
+				</button>
+
+				<button class="botao" onclick="jogar('1')">
+					<img id="1" class="imagem" src="" />
+				</button>
+				<button class="botao" onclick="jogar('2')">
+					<img id="2" class="imagem" src="" />
+				</button>
+			</div>
+			<div class="linha2">
+				<button class="botao" onclick="jogar('3')">
+					<img id="3" class="imagem" src="" />
+				</button>
+				<button class="botao" onclick="jogar('4')">
+					<img id="4" class="imagem" src="" />
+				</button>
+				<button class="botao" onclick="jogar('5')">
+					<img id="5" class="imagem" src="" />
+				</button>
+			</div>
+			<div class="linha3">
+				<button class="botao" onclick="jogar('6')">
+					<img id="6" class="imagem" src="" />
+				</button>
+				<button class="botao" onclick="jogar('7')">
+					<img id="7" class="imagem" src="" />
+				</button>
+				<button class="botao" onclick="jogar('8')">
+					<img id="8" class="imagem" src="" />
+				</button>
+			</div>
+		</section>
+		<section class="placar">
+			<div>
+				<img class="placar-img" src="img/img-X.png" alt="" />
+				<p class="placar-value" id="placarX">= 0</p>
+				<img class="placar-img" src="img/img-O.png" alt="" />
+				<p class="placar-value" id="placarO">= 0</p>
+			</div>
+			<div>
+				<button id="placar-botao" onclick="zerarPlacar()">
+					Restart Placar
+				</button>
+			</div>
+		</section>
+		<script src="main.js"></script>
+	</body>
+</html>
